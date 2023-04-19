@@ -10,7 +10,7 @@
         <span class="text-2xl flex-1 text-center">{{ $t("login.title") }}</span>
         <lang-select style="color: #fff" />
       </div>
-
+      <!-- 账号表框 -->
       <el-form-item prop="username">
         <div class="p-2 text-white">
           <svg-icon icon-class="user" />
@@ -30,6 +30,7 @@
         content="Caps lock is On"
         placement="right"
       >
+      <!-- 密码表框 -->
         <el-form-item prop="password">
           <span class="p-2 text-white">
             <svg-icon icon-class="password" />
@@ -65,12 +66,11 @@
           class="w-[60%]"
           @keyup.enter="handleLogin"
         />
-
         <div class="captcha">
           <img :src="captchaBase64" @click="getCaptcha" />
         </div>
       </el-form-item>
-
+      <!-- 登录按钮 -->
       <el-button
         size="default"
         :loading="loading"
@@ -79,7 +79,6 @@
         @click.prevent="handleLogin"
         >{{ $t("login.login") }}
       </el-button>
-
       <!-- 账号密码提示 -->
       <div class="mt-4 text-white text-sm">
         <span>{{ $t("login.username") }}: admin</span>
